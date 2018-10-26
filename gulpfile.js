@@ -12,7 +12,6 @@ const imagemin = require('gulp-imagemin');
 nodeSass.compiler = require('node-sass');
 
 const scssFiles = [
-	'./node_modules/normalize.css/normalize.css',
 	'./src/sass/**/*.scss'
 ];
 
@@ -46,7 +45,7 @@ function watch() {
         }
     });
 	gulp.watch('./src/sass/**/*.scss', sass);
-	//gulp.watch('./src/img/*', img);
+	gulp.watch('./src/img/*', img);
 	gulp.watch('./**/*.html', browserSync.reload);
 }
 
