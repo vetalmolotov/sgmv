@@ -46,7 +46,7 @@ function watch() {
         }
     });
 	gulp.watch('./src/sass/**/*.scss', sass);
-	gulp.watch('./src/img/*', img);
+	//gulp.watch('./src/img/*', img);
 	gulp.watch('./**/*.html', browserSync.reload);
 }
 
