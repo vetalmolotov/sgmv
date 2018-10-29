@@ -1,0 +1,93 @@
+@import "variables";
+
+
+.header {
+	background: url("../img/header_image.png") no-repeat 0 0;
+	background-size: cover;
+	
+	&-top {
+		display: flex;
+		justify-content: space-between;
+		padding: 35px 43px 0;
+		&-button {
+			&__back {
+				display: flex;
+				align-items: center;
+				height: 42px;
+				padding-left: 57px;
+				font-size: 18px;
+				text-transform: uppercase;
+				color: $button-color;
+				font-family: $open-Sans;
+				font-weight: bold;
+				outline: none;
+				background: url("../img/arrow_back.png") no-repeat 0 0;
+				
+				&:hover {
+					color: $button-color;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	&-logo {
+		display: flex;
+		justify-content: center;
+		height: 59px;
+		padding: 59px 0;
+	}
+	&-title {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 55px 0;
+		&:after {
+			content:'';
+			position: absolute;
+			width: 25%;
+			bottom: 0;
+			border: 1px solid $h3-color;
+		}
+		h1 {
+			font-size: 4.625em;
+			font-family: $oswald;
+			font-weight: bold;
+			color: $h1-color;
+			text-transform: uppercase;
+			line-height: 70px;
+		}
+		h3 {
+			font-family: $oswald;
+			font-size: 2.25em;
+			text-transform: uppercase;
+			font-weight: bold;
+			color:$primary-color;
+			line-height: 50px;
+		}
+	}
+	&-description {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 55px 0 120px;
+		
+		h4 {
+			font-family: $oswald;
+			color: $primary-color;
+			font-size: 24px;
+			font-style: italic;
+		}
+		h3 {
+			font-family: $oswald;
+			font-size: 1.875em;
+			color: $h3-color;
+			line-height: 30px;
+			text-transform: uppercase;
+		}
+	}
+
+	
+}
+

@@ -1,0 +1,109 @@
+@import "variables";
+
+.how-we-work {
+	background: $background-color;
+	
+	&-title {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		padding: 70px 20px;
+		h2 {
+			margin-bottom: 20px;
+			color: $primary-color;
+			font-size: 3em;
+			font-family: $oswald;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+		
+		p {
+			margin: 0;
+			font-family: $open-Sans;
+			color: $main-text-color;
+			font-size: 1.125em;
+		}
+	}
+	&-steps {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: center;
+		
+		&__item {
+			max-width: 300px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: relative;
+			padding: 0 15px 70px;
+
+			&:last-child .how-we-work-steps__point::after {
+				display: none;
+			}
+			&:first-child .how-we-work-steps__point {
+				background: none;
+				&::before {
+					content: '';
+					width: 49px;
+					height: 50px;
+					top: -18px;
+					left: 50%;
+					transform: translateX(-50%);
+					border-radius: 0;
+					border: none;
+					background: url("../img/how_we_work_plane.png") transparent no-repeat 0 0;
+				}
+			}
+		}
+		&__point {
+			margin-bottom: 45px;
+			width: 15px;
+			height: 15px;
+			background-color: $bullet-color;
+			border-radius: 50%;
+			&:before,
+			&:after {
+				content: '';
+				width: calc(50% - 40px);
+				position: absolute;
+				top: 7px;
+				border: 1px solid $bullet-line-color;
+				box-sizing: border-box;
+			}
+			&:before {
+				left: 0;
+			}
+			&:after {
+				right: 0;
+			}
+			
+		}
+		&__text {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			padding: 0 10px;
+			text-align: center;
+			
+			h4 {
+				width: 80%;
+				min-height: 75px;
+				color: $heading-color;
+				font-family: $oswald;
+				font-size: 24px;
+				text-transform: uppercase;
+			}
+			p {
+				font-family: $open-Sans;
+				color: $bullet-text-color;
+				font-style: italic;
+			}
+			
+		}
+	}
+	
+}
