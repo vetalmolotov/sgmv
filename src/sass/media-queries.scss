@@ -15,42 +15,139 @@
 	}
 }
 @media screen and (max-width: 720px) {
-	.how-we-work-steps {
-		flex-direction: column;
-		align-items: center;
-		&__item {
-			padding-bottom: 10px;
-			flex-direction: row;
-			align-items: flex-start;
+	.media {
+		.header {
+			&-title {
+				padding: 25px 0;
+				&::after {
+					width: 50%;
+				}
+				h1 {
+					font-size:3em;
+					line-height: 50px;
+					padding: 0 5%;
+				}
+				h3 {
+					line-height: 30px;
+					font-size: 1.8em;
+				}
+			}
+			&-description {
+				padding: 25px 0 80px;
+				h4 {
+					font-size: 20px;
+				}
+				h3 {
+					font-size: 1.6em;
+				}
+			}
 		}
-		&__item:first-child {
-			.how-we-work-steps__point {
-				
+		.how-we-work {
+			&-title {
+				padding: 15px 5% 10px;
+				h2 {
+					font-size: 2.3em;
+				}
+			}
+		}
+		.how-we-work-steps {
+			flex-direction: column;
+			align-items: center;
+			&__item {
+				padding-bottom: 10px;
+				flex-direction: row;
+				align-items: flex-start;
+			}
+			&__item:first-child {
+				.how-we-work-steps__point {
+					
+					&::before {
+						left: 25px;
+						top: 5px;
+					}
+					&::after {
+						height: calc(95% - 60px);
+					}
+				}
+			}
+			&__point {
+				margin-bottom: 0;
+				margin-top: 10px;
 				&::before {
-					left: 25px;
-					top: 5px;
+					height: calc(5% - 30px);
+					width: initial;
+					left: 21px;
+					top: 0;
 				}
 				&::after {
-					height: calc(95% - 60px);
+					height: calc(95% - 30px);
+					width: initial;
+					right: initial;
+					bottom: 0;
+					top: initial;
+					left: 21px;
 				}
 			}
 		}
-		&__point {
-			margin-bottom: 0;
-			margin-top: 10px;
-			&::before {
-				height: calc(5% - 30px);
-				width: initial;
-				left: 21px;
-				top: 0;
+		.wireframe {
+			padding: 20px 5%;
+			.wireframe-items {
+				flex-direction: column;
+				.wireframe-items__title {
+					width: auto;
+					h2 {
+						font-size: 2.3em;
+					}
+				}
+				&__pic {
+					display: none;
+				}
+				&__pic.wireframe01 {
+					display: block;
+					width: 100%;
+				}
 			}
-			&::after {
-				height: calc(95% - 30px);
-				width: initial;
-				right: initial;
-				bottom: 0;
-				top: initial;
-				left: 21px;
+		}
+		.footer {
+			padding: 40px 0;
+			&-search {
+				flex-direction: column;
+				.search-info {
+					padding: 10px 5%;
+					p {
+						width: 100%;
+					}
+					&-img {
+						max-width: 100%;
+						margin-top: 0;
+					}
+				}
+				.search-img {
+					display: none;
+				}
+			}
+			&-tickets {
+				flex-direction: column;
+				.tickets-img {
+					order: 2;
+					overflow: initial;
+					width: 100%;
+					padding: 0 5%;
+					display: block;
+					
+					img {
+						width: 100%;
+					}
+				}
+				.tickets-info {
+					padding: 10px 5%;
+				}
+			}
+			&-controls {
+				padding:20px 5% 0;
+				&__back {
+					font-size: 17px;
+				}
 			}
 		}
 	}
